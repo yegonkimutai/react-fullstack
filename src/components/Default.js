@@ -1,7 +1,14 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom'
+import { Navigate, Outlet } from 'react-router-dom'
+import { useStateContext } from '../context/Provider'
 
 function Default() {
+  const{user, token} = useStateContext()
+
+  if(!token) {
+    return <Navigate to={'/login'} />
+  }
+
   return (
     <div>
         Default
