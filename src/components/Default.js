@@ -10,7 +10,7 @@ function Default() {
   }
 
   const onLogout = (e) => {
-    e.preventDefault
+    e.preventDefault()
   }
 
   return (
