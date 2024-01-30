@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import { Link, Navigate, Outlet } from 'react-router-dom'
 import { useStateContext } from '../context/Provider'
@@ -6,7 +7,7 @@ function Default() {
   const{user, token} = useStateContext()
 
   if(!token) {
-    return <Navigate to={'/login'} />
+    return <Navigate to='/login' />
   }
 
   const onLogout = (e) => {
